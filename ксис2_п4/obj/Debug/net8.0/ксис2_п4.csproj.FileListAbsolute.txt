@@ -1,0 +1,14 @@
+C:\Users\HP\source\repos\ксис2_п4\ксис2_п4\bin\Debug\net8.0\ксис2_п4.exe
+C:\Users\HP\source\repos\ксис2_п4\ксис2_п4\bin\Debug\net8.0\ксис2_п4.deps.json
+C:\Users\HP\source\repos\ксис2_п4\ксис2_п4\bin\Debug\net8.0\ксис2_п4.runtimeconfig.json
+C:\Users\HP\source\repos\ксис2_п4\ксис2_п4\bin\Debug\net8.0\ксис2_п4.dll
+C:\Users\HP\source\repos\ксис2_п4\ксис2_п4\bin\Debug\net8.0\ксис2_п4.pdb
+C:\Users\HP\source\repos\ксис2_п4\ксис2_п4\obj\Debug\net8.0\ксис2_п4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\source\repos\ксис2_п4\ксис2_п4\obj\Debug\net8.0\ксис2_п4.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\ксис2_п4\ксис2_п4\obj\Debug\net8.0\ксис2_п4.AssemblyInfo.cs
+C:\Users\HP\source\repos\ксис2_п4\ксис2_п4\obj\Debug\net8.0\ксис2_п4.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\ксис2_п4\ксис2_п4\obj\Debug\net8.0\ксис2_п4.dll
+C:\Users\HP\source\repos\ксис2_п4\ксис2_п4\obj\Debug\net8.0\refint\ксис2_п4.dll
+C:\Users\HP\source\repos\ксис2_п4\ксис2_п4\obj\Debug\net8.0\ксис2_п4.pdb
+C:\Users\HP\source\repos\ксис2_п4\ксис2_п4\obj\Debug\net8.0\ксис2_п4.genruntimeconfig.cache
+C:\Users\HP\source\repos\ксис2_п4\ксис2_п4\obj\Debug\net8.0\ref\ксис2_п4.dll
