@@ -1,0 +1,14 @@
+C:\Users\HP\source\repos\myTracert\bin\Release\net8.0\myTracert.exe
+C:\Users\HP\source\repos\myTracert\bin\Release\net8.0\myTracert.deps.json
+C:\Users\HP\source\repos\myTracert\bin\Release\net8.0\myTracert.runtimeconfig.json
+C:\Users\HP\source\repos\myTracert\bin\Release\net8.0\myTracert.dll
+C:\Users\HP\source\repos\myTracert\bin\Release\net8.0\myTracert.pdb
+C:\Users\HP\source\repos\myTracert\obj\Release\net8.0\myTracert.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\source\repos\myTracert\obj\Release\net8.0\myTracert.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\myTracert\obj\Release\net8.0\myTracert.AssemblyInfo.cs
+C:\Users\HP\source\repos\myTracert\obj\Release\net8.0\myTracert.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\myTracert\obj\Release\net8.0\myTracert.dll
+C:\Users\HP\source\repos\myTracert\obj\Release\net8.0\refint\myTracert.dll
+C:\Users\HP\source\repos\myTracert\obj\Release\net8.0\myTracert.pdb
+C:\Users\HP\source\repos\myTracert\obj\Release\net8.0\myTracert.genruntimeconfig.cache
+C:\Users\HP\source\repos\myTracert\obj\Release\net8.0\ref\myTracert.dll

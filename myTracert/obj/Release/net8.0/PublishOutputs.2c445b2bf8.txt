@@ -1,0 +1,5 @@
+C:\Users\HP\source\repos\myTracert\bin\Release\net8.0\publish\myTracert.exe
+C:\Users\HP\source\repos\myTracert\bin\Release\net8.0\publish\myTracert.dll
+C:\Users\HP\source\repos\myTracert\bin\Release\net8.0\publish\myTracert.deps.json
+C:\Users\HP\source\repos\myTracert\bin\Release\net8.0\publish\myTracert.runtimeconfig.json
+C:\Users\HP\source\repos\myTracert\bin\Release\net8.0\publish\myTracert.pdb
