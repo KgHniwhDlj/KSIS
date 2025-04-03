@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Diagnostics;
@@ -9,9 +9,11 @@ class Tracert
     private const int maxHops = 30;
     private const int bufferSize = 1024;
     private const int packetsPerHop = 3;
+    private static ushort sequenceNumber = 1; 
 
     static void Main(string[] args)
     {
+        
         if (args.Length == 0)
         {
             Console.WriteLine("myTracert <адрес>");
@@ -56,6 +58,9 @@ class Tracert
                 for (int packetNumber = 0; packetNumber < packetsPerHop; packetNumber++)
                 {
                     byte[] sendBuffer = CreateIcmpPacket();
+
+                    sequenceNumber++;
+
                     byte[] receiveBuffer = new byte[bufferSize];
 
                     IPEndPoint remoteEndPoint = new IPEndPoint(IPAddress.Any, 0);
@@ -111,15 +116,16 @@ class Tracert
 
     private static byte[] CreateIcmpPacket()
     {
+        
         byte[] packet = new byte[64];
         packet[0] = 8;
         packet[1] = 0;
         packet[2] = 0;
         packet[3] = 0;
-        packet[4] = 0;
-        packet[5] = 0;
-        packet[6] = 0;
-        packet[7] = 0;
+        packet[4] = 0x00;
+        packet[5] = 0x01;
+        packet[6] = (byte)(sequenceNumber >> 8);
+        packet[7] = (byte)(sequenceNumber & 0xFF);
 
         ushort checksum = CalculateChecksum(packet);
         packet[2] = (byte)(checksum >> 8);
