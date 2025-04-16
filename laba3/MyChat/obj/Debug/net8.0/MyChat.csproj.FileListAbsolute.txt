@@ -1,0 +1,14 @@
+C:\Users\HP\source\repos\ксис3_страдаю\MyChat\bin\Debug\net8.0\MyChat.exe
+C:\Users\HP\source\repos\ксис3_страдаю\MyChat\bin\Debug\net8.0\MyChat.deps.json
+C:\Users\HP\source\repos\ксис3_страдаю\MyChat\bin\Debug\net8.0\MyChat.runtimeconfig.json
+C:\Users\HP\source\repos\ксис3_страдаю\MyChat\bin\Debug\net8.0\MyChat.dll
+C:\Users\HP\source\repos\ксис3_страдаю\MyChat\bin\Debug\net8.0\MyChat.pdb
+C:\Users\HP\source\repos\ксис3_страдаю\MyChat\obj\Debug\net8.0\MyChat.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\source\repos\ксис3_страдаю\MyChat\obj\Debug\net8.0\MyChat.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\ксис3_страдаю\MyChat\obj\Debug\net8.0\MyChat.AssemblyInfo.cs
+C:\Users\HP\source\repos\ксис3_страдаю\MyChat\obj\Debug\net8.0\MyChat.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\ксис3_страдаю\MyChat\obj\Debug\net8.0\MyChat.dll
+C:\Users\HP\source\repos\ксис3_страдаю\MyChat\obj\Debug\net8.0\refint\MyChat.dll
+C:\Users\HP\source\repos\ксис3_страдаю\MyChat\obj\Debug\net8.0\MyChat.pdb
+C:\Users\HP\source\repos\ксис3_страдаю\MyChat\obj\Debug\net8.0\MyChat.genruntimeconfig.cache
+C:\Users\HP\source\repos\ксис3_страдаю\MyChat\obj\Debug\net8.0\ref\MyChat.dll

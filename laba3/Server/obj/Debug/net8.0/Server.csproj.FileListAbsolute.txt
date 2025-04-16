@@ -1,0 +1,14 @@
+C:\Users\HP\source\repos\ксис3_страдаю\Server\bin\Debug\net8.0\Server.exe
+C:\Users\HP\source\repos\ксис3_страдаю\Server\bin\Debug\net8.0\Server.deps.json
+C:\Users\HP\source\repos\ксис3_страдаю\Server\bin\Debug\net8.0\Server.runtimeconfig.json
+C:\Users\HP\source\repos\ксис3_страдаю\Server\bin\Debug\net8.0\Server.dll
+C:\Users\HP\source\repos\ксис3_страдаю\Server\bin\Debug\net8.0\Server.pdb
+C:\Users\HP\source\repos\ксис3_страдаю\Server\obj\Debug\net8.0\Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\source\repos\ксис3_страдаю\Server\obj\Debug\net8.0\Server.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\ксис3_страдаю\Server\obj\Debug\net8.0\Server.AssemblyInfo.cs
+C:\Users\HP\source\repos\ксис3_страдаю\Server\obj\Debug\net8.0\Server.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\ксис3_страдаю\Server\obj\Debug\net8.0\Server.dll
+C:\Users\HP\source\repos\ксис3_страдаю\Server\obj\Debug\net8.0\refint\Server.dll
+C:\Users\HP\source\repos\ксис3_страдаю\Server\obj\Debug\net8.0\Server.pdb
+C:\Users\HP\source\repos\ксис3_страдаю\Server\obj\Debug\net8.0\Server.genruntimeconfig.cache
+C:\Users\HP\source\repos\ксис3_страдаю\Server\obj\Debug\net8.0\ref\Server.dll
