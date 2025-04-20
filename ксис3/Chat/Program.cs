@@ -13,12 +13,12 @@ namespace Chat
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите ваше имя (необязательно):");
+            Console.WriteLine("Введите ваше имя:");
             string userName = Console.ReadLine();
             if (string.IsNullOrWhiteSpace(userName))
                 userName = "Аноним";
 
-            Console.WriteLine("Введите ваш IP для локального подключения (например, 127.0.0.2):");
+            Console.WriteLine("Введите ваш IP для локального подключения:");
             string localIP = Console.ReadLine();
             Console.WriteLine("Введите IP сервера для подключения:");
             string serverIP = Console.ReadLine();
