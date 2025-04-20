@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 
-namespace ChatClient
+namespace Chat
 {
     class Program
     {
@@ -13,15 +13,12 @@ namespace ChatClient
 
         static void Main(string[] args)
         {
-            // Ввод имени пользователя
-            Console.WriteLine("Введите ваше имя:");
+            Console.WriteLine("Введите ваше имя (необязательно):");
             string userName = Console.ReadLine();
             if (string.IsNullOrWhiteSpace(userName))
-            {
                 userName = "Аноним";
-            }
 
-            Console.WriteLine("Введите ваш IP для локального подключения:");
+            Console.WriteLine("Введите ваш IP для локального подключения (например, 127.0.0.2):");
             string localIP = Console.ReadLine();
             Console.WriteLine("Введите IP сервера для подключения:");
             string serverIP = Console.ReadLine();
@@ -32,10 +29,8 @@ namespace ChatClient
                 return;
             }
 
-            // Биндим сокет клиента на указанный локальный адрес
             try
             {
-                // Порт 0 – системный выбор свободного порта
                 IPEndPoint localEndPoint = new IPEndPoint(IPAddress.Parse(localIP), 0);
                 clientSocket.Bind(localEndPoint);
             }
@@ -45,7 +40,6 @@ namespace ChatClient
                 return;
             }
 
-            // Подключаемся к серверу
             try
             {
                 IPEndPoint serverEndPoint = new IPEndPoint(IPAddress.Parse(serverIP), port);
@@ -57,40 +51,29 @@ namespace ChatClient
                 return;
             }
 
-            Console.WriteLine($"[{DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss")}] Подключено к серверу {serverIP}:{port}");
+            Console.WriteLine($"[{DateTime.Now:dd.MM.yyyy HH:mm:ss}] Подключено к серверу {serverIP}:{port}");
 
-            // Отправляем уведомление о подключении (это сообщение отправляется на сервер,
-            // и согласно логике сервера не будет эхо-выведено самому отправителю)
-            string connMessage = $"[{DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss")}] {userName} ({clientSocket.LocalEndPoint}): подключился";
+            // Для отображения используем только IP (без порта)
+            string localIPAddr = ((IPEndPoint)clientSocket.LocalEndPoint).Address.ToString();
+            string connMessage = $"[{DateTime.Now:dd.MM.yyyy HH:mm:ss}] {userName} ({localIPAddr}): подключился";
             clientSocket.Send(Encoding.UTF8.GetBytes(connMessage));
 
-            // Поток для получения сообщений от сервера
             Thread receiveThread = new Thread(ReceiveData);
             receiveThread.Start();
 
-            // Основной цикл для отправки сообщений
             while (isRunning)
             {
                 string message = Console.ReadLine();
                 if (string.IsNullOrEmpty(message))
                     continue;
-
-                // Формат сообщения согласно требованиям
-                string fullMessage = $"[{DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss")}] {userName} ({clientSocket.LocalEndPoint}): {message}";
-                try
-                {
-                    clientSocket.Send(Encoding.UTF8.GetBytes(fullMessage));
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Ошибка при отправке сообщения: {ex.Message}");
-                    break;
-                }
+                string fullMessage = $"[{DateTime.Now:dd.MM.yyyy HH:mm:ss}] {userName} ({localIPAddr}): {message}";
+                // Отправляем сообщение на сервер;
+                // сервер затем пересылает его всем, кроме отправителя, чтобы убрать дублирование.
+                clientSocket.Send(Encoding.UTF8.GetBytes(fullMessage));
             }
             clientSocket.Close();
         }
 
-        // Метод получения сообщений от сервера
         static void ReceiveData()
         {
             while (isRunning)
@@ -102,7 +85,6 @@ namespace ChatClient
                     if (received == 0)
                         break;
                     string text = Encoding.UTF8.GetString(buffer, 0, received);
-                    // Выводим полученное сообщение в консоль
                     Console.WriteLine(text);
                 }
                 catch (Exception ex)
