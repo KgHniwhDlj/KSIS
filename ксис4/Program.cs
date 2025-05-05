@@ -17,9 +17,6 @@ namespace ксис4
         public static IPAddress ListenIp = IPAddress.Any; // Прослушивание на всех интерфейсах
         public const int Port = 10000;        // Порт, на котором сервер принимает подключения
 
-        // Список заблокированных хостов
-        public static HashSet<string> BlockedHosts = new HashSet<string>() { "rutor.info" };
-
         static void Main(string[] args)
         {
             TcpListener listener = new TcpListener(ListenIp, Port);
@@ -65,16 +62,6 @@ namespace ксис4
                     string host;
                     IPEndPoint remoteEndPoint = GetRemoteEndpoint(fullRequest, out host);
 
-                    // Проверка на заблокированный хост
-                    if (BlockedHosts.Contains(host))
-                    {
-                        string blockResponse = "HTTP/1.1 404 NOT FOUND\r\n\r\nBlocked page";
-                        Console.WriteLine($"Хост {host} заблокирован.");
-                        byte[] responseBytes = Encoding.UTF8.GetBytes(blockResponse);
-                        clientStream.Write(responseBytes, 0, responseBytes.Length);
-                        client.Close();
-                        return;
-                    }
 
                     // Если запрос содержит абсолютный URL (например, "GET http://..."), преобразуем в относительный
                     if (fullRequest.StartsWith("GET http", StringComparison.OrdinalIgnoreCase) ||
