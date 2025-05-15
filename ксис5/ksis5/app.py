@@ -116,7 +116,7 @@ def handle_file(subpath):
         abort(405)
 
 
-# Новый эндпоинт для скачивания файла (GET)
+# для скачивания файла (GET)
 @app.route('/download/<path:subpath>', methods=['GET'])
 def download_file(subpath):
     abs_path = get_abs_path(subpath)
@@ -132,5 +132,4 @@ def download_file(subpath):
 
 
 if __name__ == '__main__':
-    # Запуск сервера на всех интерфейсах
     app.run(debug=True, host='0.0.0.0')
